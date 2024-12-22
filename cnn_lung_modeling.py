@@ -6,8 +6,8 @@ import json
 from PIL import Image
 
 # Paths to the model and class indices
-MODEL_PATH = "https://raw.githubusercontent.com/amrurh/lung_classification/master/covid19_cnn_model.h5"
-CLASS_INDICES_PATH = "https://raw.githubusercontent.com/amrurh/lung_classification/master/class_indices.json"
+MODEL_PATH = "covid19_cnn_model.h5"
+CLASS_INDICES_PATH = "class_indices.json"
 
 # Load the model and class indices
 @st.cache_resource  # Cache the model to avoid reloading on every run
@@ -29,9 +29,9 @@ st.write("### Class Reference")
 
 # List of example images for each class
 class_images = {
-    "Covid": "https://raw.githubusercontent.com/amrurh/lung_classification/master/covid_ex.jpeg",
-    "Normal": "https://raw.githubusercontent.com/amrurh/lung_classification/master/normal_ex.jpeg",
-    "Viral Pneumonia": "https://raw.githubusercontent.com/amrurh/lung_classification/master/viral_pneumonia_ex.jpeg"
+    "Covid": "covid_ex.jpeg",
+    "Normal": "normal_ex.jpeg",
+    "Viral Pneumonia": "viral_pneumonia_ex.jpeg"
 }
 
 # Create columns for each class
